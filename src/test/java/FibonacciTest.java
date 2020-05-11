@@ -4,16 +4,14 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import utils.*;
 
-
 import static org.junit.Assert.assertEquals;
 
 @RunWith(JUnitParamsRunner.class)
-
 public class FibonacciTest {
 
     @Test
     @Parameters(method = "rightValues")
-    public void fibonacciCounterWithRightValuesTest(int number, String exp) {
+    public void testFibonacciCounterWithRightValues(int number, String exp) {
         Fibonacci fib = new Fibonacci();
         assertEquals(exp, fib.counter(number));
     }
